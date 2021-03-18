@@ -1,25 +1,39 @@
 class UsersController < ApplicationController
-    # def login
-    #     user = User.first
-    #     render json: user
-    # end
-    
+    before_action :authenticate, only: [:verify]
+
+    def login
+        user = User.find_by(username: params[:username])
+
+        if user && user.authenticate(params[:password])
+            token = JWT.encode({user_id: user.id}, 'codename', 'HS256')
+            @current_user = user
+            render json: {user: user, token: token}
+        else    
+            render json: {errors: ["Invalid Username or Password"]} 
+        end   
+    end
+
+    def logout
+        @current_user = nil
+    end
+
     def index
         users = User.all
         render json: users
     end
     
     def show
-        user = User.first
+        user = User.find(params[:id])
         render json: user
     end
     
     def create
-        if User.find_by(username: params[:username])
-            render json: {error: "This user already exists"}
-        else 
-            @user = User.create(user_params)
-            render json: @user
+        new_user = User.create(user_params)
+        if new_user.id?
+            token = JWT.encode({user_id: new_user.id}, 'codename', 'HS256')
+            render json: {user: new_user, token: token}, status: :created
+        else
+            render json: new_user.errors.full_messages
         end
     end
     
