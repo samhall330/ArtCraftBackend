@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     #     user = User.first
     #     render json: user
     # end
+    
     def index
         users = User.all
         render json: users
