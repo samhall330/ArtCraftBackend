@@ -13,6 +13,11 @@ class UsersController < ApplicationController
         end   
     end
 
+    def verify
+        user = @current_user
+        render json: @current_user
+    end
+
     def logout
         @current_user = nil
     end
