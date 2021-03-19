@@ -1,16 +1,16 @@
 class SpecialtiesController < ApplicationController
     def index
-        specialities = Speciality.all
-        render json: specialities
+        specialties = Specialty.all
+        render json: specialties
     end
 
     def create
-        @speciality = Speciality.create(speciality_params)
+        @speciality = Specialty.create(speciality_params)
         render json: @speciality
     end
     
     def destroy
-        speciality = Speciality.find_by(id: params[:id])
+        speciality = Specialty.find_by(id: params[:id])
         speciality.destroy!
         render json: {}
     end
