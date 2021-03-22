@@ -20,5 +20,6 @@ adobe_premiere = Software.create(user_id: 1, soft_name: "Adobe Premiere Pro", so
 ### Projects ###
 
 short_film = Project.create(user_id: 1, title: "Gutterballs", project_type: "short film", location: "New York City", start_date: "May 1, 2021", duration: "3 weeks")
-
+comedy = Project.create(user_id: 1, title: "Comedy Show", project_type: "comedy show", location: "New York City", start_date: "March 30, 2021", duration: "1 night")
+art_show = Project.create(user_id: 1, title: "Mod Art Show", project_type: "art show", location: "New York City", start_date: "July 1st, 2021", duration: "1 week")
 

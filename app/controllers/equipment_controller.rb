@@ -6,7 +6,11 @@ class EquipmentController < ApplicationController
 
     def create
         @equipment = Equipment.create(equipment_params)
-        render json: @equipment
+        if @equipment.id?
+            render json: @equipment
+        else 
+            render json: @equipment.errors.full_messages
+        end
     end
     
     def destroy
@@ -18,6 +22,6 @@ class EquipmentController < ApplicationController
     private
 
     def equipment_params
-        params.permit(:user_id, :equip_link, :equip_name)
+        params.permit(:user_id, :equip_link, :equip_name, :equipment)
     end
 end

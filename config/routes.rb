@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: 'users#login'
   post '/logout', to: 'users#logout'
   get '/verify', to: 'users#verify'
+  post '/softwares', to: 'softwares#create'
   # post '/users' to: 'users#create'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

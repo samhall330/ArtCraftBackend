@@ -6,7 +6,11 @@ class SoftwaresController < ApplicationController
 
     def create
         @software = Software.create(software_params)
-        render json: @software
+        if @software.id?
+            render json: @software
+        else 
+            render json: @software.errors.full_messages
+        end
     end
     
     def destroy
@@ -18,6 +22,6 @@ class SoftwaresController < ApplicationController
     private
 
     def software_params
-        params.permit(:user_id, :soft_link, :soft_name)
+        params.permit(:user_id, :soft_link, :soft_name, :software)
     end
 end
