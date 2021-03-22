@@ -22,6 +22,6 @@ class SoftwaresController < ApplicationController
     private
 
     def software_params
-        params.permit(:user_id, :soft_link, :soft_name, :software)
+        params.permit(:user_id, :soft_link, :name, :software)
     end
 end

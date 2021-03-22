@@ -22,6 +22,6 @@ class EquipmentController < ApplicationController
     private
 
     def equipment_params
-        params.permit(:user_id, :equip_link, :equip_name, :equipment)
+        params.permit(:user_id, :equip_link, :name, :equipment)
     end
 end

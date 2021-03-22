@@ -18,6 +18,6 @@ class SpecialtiesController < ApplicationController
     private
 
     def speciality_params
-        params.permit(:user_id, :spec_name, :pro_level)
+        params.permit(:user_id, :name, :pro_level)
     end
 end
