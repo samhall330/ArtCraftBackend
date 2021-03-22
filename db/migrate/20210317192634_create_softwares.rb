@@ -1,7 +1,7 @@
 class CreateSoftwares < ActiveRecord::Migration[6.1]
   def change
     create_table :softwares do |t|
-      t.string :soft_name
+      t.string :name
       t.string :soft_link
       t.integer :user_id
 

@@ -1,7 +1,7 @@
 class CreateEquipment < ActiveRecord::Migration[6.1]
   def change
     create_table :equipment do |t|
-      t.string :equip_name
+      t.string :name
       t.string :equip_link
       t.integer :user_id
 

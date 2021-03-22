@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_192737) do
   end
 
   create_table "equipment", force: :cascade do |t|
-    t.string "equip_name"
+    t.string "name"
     t.string "equip_link"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_192737) do
   end
 
   create_table "softwares", force: :cascade do |t|
-    t.string "soft_name"
+    t.string "name"
     t.string "soft_link"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_192737) do
   end
 
   create_table "specialties", force: :cascade do |t|
-    t.string "spec_name"
+    t.string "name"
     t.string "pro_level"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

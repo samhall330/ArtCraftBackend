@@ -1,7 +1,7 @@
 class CreateSpecialties < ActiveRecord::Migration[6.1]
   def change
     create_table :specialties do |t|
-      t.string :spec_name
+      t.string :name
       t.string :pro_level
       t.integer :user_id
 
