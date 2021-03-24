@@ -1,7 +1,7 @@
 ### Users ###
 
 sam = User.create(name:"Sam", username:"samhall", password:"abc123", profile_pic:"https://m.media-amazon.com/images/I/71XxpJV6iUL._SS500_.jpg", bio:"Amateur filmmaker and stand up comic.", phone:"918-857-0284")
-jeff = User.create(name: "Jeff", username:"theDude", password:"abc123", profile_pic:"https://i.pinimg.com/originals/76/19/92/76199263c8d1bc961e93c5a0a987b732.png", bio:"Roadie for Metallica", phone:"323-804-9389")
+jeff = User.create(name: "Jeff", username:"theDude", password:"abc123", profile_pic:"https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg", bio:"Roadie for Metallica", phone:"323-804-9389")
 
 ### Specialties ###
 
@@ -19,7 +19,7 @@ adobe_premiere = Software.create(user_id: 1, name: "Adobe Premiere Pro", soft_li
 
 ### Projects ###
 
-short_film = Project.create(user_id: 1, title: "Gutterballs", project_type: "short film", location: "New York City", start_date: "May 1, 2021", duration: "3 weeks")
+short_film = Project.create(user_id: 1, title: "Short Film", project_type: "short film", location: "New York City", start_date: "May 1, 2021", duration: "3 weeks")
 comedy = Project.create(user_id: 1, title: "Comedy Show", project_type: "comedy show", location: "New York City", start_date: "March 30, 2021", duration: "1 night")
 art_show = Project.create(user_id: 1, title: "Mod Art Show", project_type: "art show", location: "New York City", start_date: "July 1st, 2021", duration: "1 week")
 
