@@ -11,11 +11,11 @@ class User < ApplicationRecord
 
     def search_array
         searchResults = []
-        specs = self.specialties.map{|spec| spec.name}
+        specs = self.specialties
         searchResults << specs
-        equips = self.equipments.map{|equip| equip.name}
+        equips = self.equipments
         searchResults << equips
-        softs = self.softwares.map{|soft| soft.name} 
+        softs = self.softwares
         searchResults << softs
         searchResults.flatten      
     end

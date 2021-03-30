@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/verify', to: 'users#verify'
   post '/softwares', to: 'softwares#create'
   post '/projects', to: 'projects#create'
-  # post '/users' to: 'users#create'
+  get '/user-search', to: 'users#search_array'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
