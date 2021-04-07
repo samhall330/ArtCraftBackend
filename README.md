@@ -1,14 +1,15 @@
 
 🎞 Welcome to ArtCraft! 🎨
 
+![ArtCraft Projects Page](projectspage.png)
 
 This single page app is a virtual artist collective in which users can create projects and add other users as collaborators to said projects.
 
 Installation:
 - Fork and clone this repository
 - "bundle install" if necessary 
-- Open ArtCraft Backend
-- Run "rails s" in the terminal 
+- Open ArtCraft Backend, run "rails db:migrate" & "rails db:seed"
+- Run "rails s" in the terminal to start the application's backend
 - [Open the ArtCraft Frontend](https://github.com/samhall330/ArtCraftFrontend)
 - Run "npm start" 
 
